@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "Тестовое задание для TrendTech",
+      "version": "1.0.0",
+      "title": "Тестовое",
+      "contact": {
+        "email": "egorchebkasov@gmail.com"
+      }    
+    },
+    "host": "localhost:3000",
+    "basePath": "",
+    "tags": [
+      {
+        "name": "test"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/test": {
+        "post": {
+          "tags": [
+            "test"
+          ],
+          "summary": "Единственная функция описанная в тз",
+          "operationId": "test",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/test"
+              }
+            }
+          ],
+          "responses": {
+            "405": {
+              "description": "Invalid input"
+            },
+            "200": {
+                "description": "Ok"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {   
+      "test": {
+        "type": "array",
+        "example": [1,2,3]
+        }
+    },
+    "externalDocs": {
+      "description": "Find out more about Swagger",
+      "url": "http://swagger.io"
+    }
+  }
